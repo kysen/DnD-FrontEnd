@@ -8,14 +8,6 @@ import humanRanger from "../../static/images/characterImages/Human/Human-Ranger.
 import humanRouge from "../../static/images/characterImages/Human/Human-Rouge.jpg";
 
 const Human = props => {
-  // <Router>
-  //   <Switch>
-  //     <Route exact path="/" component={Home} />
-  //     <Route path="/human" component={Human} />
-  //     <Route path="/dwarf" component={Dwarf} />
-  //   </Switch>
-  // </Router>;
-
   return (
     <div>
       <h1>Role: {props.role}</h1>

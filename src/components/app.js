@@ -21,9 +21,11 @@ const CharacterCreation = () => {
   const funcSetCharacterName = e => {
     setCharacterName(e);
   };
+  //
   const funcSetRace = e => {
     setRace(e);
   };
+  //
   const funcSetRole = e => {
     setRole(e);
   };
@@ -31,6 +33,8 @@ const CharacterCreation = () => {
   const myRouter = race => {
     if (race === "Human") {
       return <Human funcSetRole={funcSetRole} role={role} />;
+    } else if (race === "Dwarf") {
+      return <Dwarf funcSetRole={funcSetRole} role={role} />;
     }
   };
 
@@ -58,8 +62,10 @@ const CharacterCreation = () => {
 
   return (
     <div className="character-creation-container">
-      <form onSubmit={e => characterSubmit(e)}>
-        <button type="submit">im a button</button>
+      <form>
+        <button type="submit" onSubmit={e => characterSubmit(e)}>
+          im a button
+        </button>
         <div className="topBar">
           <TopBar
             funcSetCharacterName={funcSetCharacterName}

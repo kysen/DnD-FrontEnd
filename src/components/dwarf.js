@@ -1,40 +1,51 @@
 import React from "react";
-// import React, { useState } from "react";
 
-// import humanCleric from "../../static/images/characterImages/Human/Human-Cleric.png";
-// import humanFighter from "../../static/images/characterImages/Human/Human-Fighter.jpg";
-// import humanPaladin from "../../static/images/characterImages/Human/Human-Paladin.jpg";
-// import humanRanger from "../../static/images/characterImages/Human/Human-Ranger.jpg";
-// import humanRouge from "../../static/images/characterImages/Human/Human-Rouge.jpg";
+import dwarfCleric from "../../static/images/characterImages/Dwarf/Dwarf-Cleric.jpg";
+import dwarfFighter from "../../static/images/characterImages/Dwarf/Dwarf-Fighter.jpg";
+import dwarfPaladin from "../../static/images/characterImages/Dwarf/Dwarf-Paladin.jpg";
+import dwarfRanger from "../../static/images/characterImages/Dwarf/Dwarf-Ranger.jpg";
+import dwarfBarbarian from "../../static/images/characterImages/Dwarf/Dwarf-Barbarian.png";
+import dwarfMonk from "../../static/images/characterImages/Dwarf/Dwarf-Monk.jpg";
 
-const Dwarf = () => {
-  //   const [role, setRole] = useState("");
+const Dwarf = props => {
   return (
     <div>
-      <h2>hello world </h2>
-      {/* <h1>Role: {role}</h1>
-      <div className="human-roles">
+      <h1>Role: {props.role}</h1>
+      <div className="roles">
         <div className="role-wrapper">
           <h3>Cleric</h3>
-          <img onClick={() => setRole("Cleric")} src={humanCleric} />
+          <img onClick={() => props.funcSetRole("Cleric")} src={dwarfCleric} />
         </div>
         <div className="role-wrapper">
           <h3>Fighter</h3>
-          <img onClick={() => setRole("Fighter")} src={humanFighter} />
+          <img
+            onClick={() => props.funcSetRole("Fighter")}
+            src={dwarfFighter}
+          />
         </div>
         <div className="role-wrapper">
           <h3>Paladin</h3>
-          <img onClick={() => setRole("Paladin")} src={humanPaladin} />
+          <img
+            onClick={() => props.funcSetRole("Paladin")}
+            src={dwarfPaladin}
+          />
         </div>
         <div className="role-wrapper">
           <h3>Ranger</h3>
-          <img onClick={() => setRole("Ranger")} src={humanRanger} />
+          <img onClick={() => props.funcSetRole("Ranger")} src={dwarfRanger} />
         </div>
         <div className="role-wrapper">
           <h3>Rouge</h3>
-          <img onClick={() => setRole("Rouge")} src={humanRouge} />
+          <img
+            onClick={() => props.funcSetRole("Barbarian")}
+            src={dwarfBarbarian}
+          />
         </div>
-      </div> */}
+        <div className="role-wrapper">
+          <h3>Rouge</h3>
+          <img onClick={() => props.funcSetRole("Monk")} src={dwarfMonk} />
+        </div>
+      </div>
     </div>
   );
 };

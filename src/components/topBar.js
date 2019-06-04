@@ -1,17 +1,7 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router";
-import { NavLink } from "react-router-dom";
-
-// import humanCleric from "../../static/images/characterImages/Human/Human-Cleric.png";
-// import humanFighter from "../../static/images/characterImages/Human/Human-Fighter.jpg";
-// import humanPaladin from "../../static/images/characterImages/Human/Human-Paladin.jpg";
-// import humanRanger from "../../static/images/characterImages/Human/Human-Ranger.jpg";
-// import humanRouge from "../../static/images/characterImages/Human/Human-Rouge.jpg";
 
 const TopBar = props => {
-  // const [characterName, setCharacterName] = useState("");
-  // const [race, setRace] = useState("");
-
   return (
     <div>
       <div className="topBar">
@@ -28,39 +18,37 @@ const TopBar = props => {
           <div className="character-race">
             <h2>Race: {props.race}</h2>
             <div className="race-buttons">
-              <NavLink
-                className="nav-link"
-                to="/human"
+              <div
+                className="race-btn"
                 onClick={() => props.funcSetRace("Human")}
               >
                 Human
-              </NavLink>
-              <NavLink
-                className="nav-link"
-                to="/dwarf"
+              </div>
+              <div
+                className="race-btn"
                 onClick={() => props.funcSetRace("Dwarf")}
               >
                 Dwarf
-              </NavLink>
+              </div>
 
-              {/* <NavLink
-                className="nav-link"
+              <div
+                className="race-btn"
                 onClick={() => props.funcSetRace("Elf")}
               >
                 Elf
-              </NavLink>
-              <NavLink
-                className="nav-link"
+              </div>
+              <div
+                className="race-btn"
                 onClick={() => props.funcSetRace("Halfling")}
               >
                 Halfling
-              </NavLink>
-              <NavLink
-                className="nav-link"
+              </div>
+              <div
+                className="race-btn"
                 onClick={() => props.funcSetRace("Orc")}
               >
                 Orc
-              </NavLink> */}
+              </div>
             </div>
           </div>
         </div>
