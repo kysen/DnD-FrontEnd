@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import humanCleric from "../../static/images/characterImages/Human/Human-Cleric.png";
 import humanFighter from "../../static/images/characterImages/Human/Human-Fighter.jpg";
@@ -6,31 +7,44 @@ import humanPaladin from "../../static/images/characterImages/Human/Human-Paladi
 import humanRanger from "../../static/images/characterImages/Human/Human-Ranger.jpg";
 import humanRouge from "../../static/images/characterImages/Human/Human-Rouge.jpg";
 
-const Human = () => {
-  const [role, setRole] = useState("");
+const Human = props => {
+  // <Router>
+  //   <Switch>
+  //     <Route exact path="/" component={Home} />
+  //     <Route path="/human" component={Human} />
+  //     <Route path="/dwarf" component={Dwarf} />
+  //   </Switch>
+  // </Router>;
+
   return (
     <div>
-      <h1>Role: {role}</h1>
+      <h1>Role: {props.role}</h1>
       <div className="roles">
         <div className="role-wrapper">
           <h3>Cleric</h3>
-          <img onClick={() => setRole("Cleric")} src={humanCleric} />
+          <img onClick={() => props.funcSetRole("Cleric")} src={humanCleric} />
         </div>
         <div className="role-wrapper">
           <h3>Fighter</h3>
-          <img onClick={() => setRole("Fighter")} src={humanFighter} />
+          <img
+            onClick={() => props.funcSetRole("Fighter")}
+            src={humanFighter}
+          />
         </div>
         <div className="role-wrapper">
           <h3>Paladin</h3>
-          <img onClick={() => setRole("Paladin")} src={humanPaladin} />
+          <img
+            onClick={() => props.funcSetRole("Paladin")}
+            src={humanPaladin}
+          />
         </div>
         <div className="role-wrapper">
           <h3>Ranger</h3>
-          <img onClick={() => setRole("Ranger")} src={humanRanger} />
+          <img onClick={() => props.funcSetRole("Ranger")} src={humanRanger} />
         </div>
         <div className="role-wrapper">
           <h3>Rouge</h3>
-          <img onClick={() => setRole("Rouge")} src={humanRouge} />
+          <img onClick={() => props.funcSetRole("Rouge")} src={humanRouge} />
         </div>
       </div>
     </div>

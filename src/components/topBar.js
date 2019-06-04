@@ -8,56 +8,59 @@ import { NavLink } from "react-router-dom";
 // import humanRanger from "../../static/images/characterImages/Human/Human-Ranger.jpg";
 // import humanRouge from "../../static/images/characterImages/Human/Human-Rouge.jpg";
 
-const TopBar = () => {
-  const [characterName, setCharacterName] = useState("");
-  const [race, setRace] = useState("");
-  // const [role, setRole] = useState("");
+const TopBar = props => {
+  // const [characterName, setCharacterName] = useState("");
+  // const [race, setRace] = useState("");
 
   return (
     <div>
       <div className="topBar">
         <div className="character-name">
-          <form>
-            <input
-              name="characterName"
-              value={characterName}
-              placeholder="enter name here"
-              onChange={e => setCharacterName(e.target.value)}
-            />
-            <button type="submit">Submit</button>
-          </form>
-          {characterName}
-          {/* {permanentName} */}
+          <input
+            name="characterName"
+            value={props.characterName}
+            placeholder="enter name here"
+            onChange={e => props.funcSetCharacterName(e.target.value)}
+          />
           <h3>Character Name</h3>
         </div>
         <div className="top-bar-right">
           <div className="character-race">
-            <h2>Race: {race}</h2>
+            <h2>Race: {props.race}</h2>
             <div className="race-buttons">
               <NavLink
                 className="nav-link"
                 to="/human"
-                onClick={() => setRace("Human")}
+                onClick={() => props.funcSetRace("Human")}
               >
                 Human
               </NavLink>
               <NavLink
                 className="nav-link"
                 to="/dwarf"
-                onClick={() => setRace("Dwarf")}
+                onClick={() => props.funcSetRace("Dwarf")}
               >
                 Dwarf
               </NavLink>
 
-              <NavLink className="nav-link" onClick={() => setRace("Elf")}>
+              {/* <NavLink
+                className="nav-link"
+                onClick={() => props.funcSetRace("Elf")}
+              >
                 Elf
               </NavLink>
-              <NavLink className="nav-link" onClick={() => setRace("Halfling")}>
+              <NavLink
+                className="nav-link"
+                onClick={() => props.funcSetRace("Halfling")}
+              >
                 Halfling
               </NavLink>
-              <NavLink className="nav-link" onClick={() => setRace("Orc")}>
+              <NavLink
+                className="nav-link"
+                onClick={() => props.funcSetRace("Orc")}
+              >
                 Orc
-              </NavLink>
+              </NavLink> */}
             </div>
           </div>
         </div>
