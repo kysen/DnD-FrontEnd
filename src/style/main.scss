@@ -1,0 +1,102 @@
+@import "./roles.scss";
+
+html {
+  font-size: 62.5%; // 1rem is 10px
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "montserrat";
+}
+
+body {
+  overflow-x: hidden;
+  font-weight: normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  margin-top: 2rem;
+  display: grid;
+  justify-items: center;
+}
+
+.character-creation-container {
+  .topBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .character-name {
+      padding: 10px 0px;
+      padding-left: 8px;
+      border: 1px solid black;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      input {
+        border-width: 0px;
+        &:focus {
+          outline: none;
+          outline-offset: 0px;
+        }
+
+        &:hover {
+          background-color: gold;
+        }
+      }
+    }
+    .top-bar-right {
+      display: flex;
+      border: 1px solid black;
+      border-radius: 10px;
+
+      .character-race {
+        padding: 10px;
+        h2 {
+          padding-bottom: 5px;
+        }
+
+        .race-buttons {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          .nav-link {
+            text-decoration: none;
+            color: black;
+            font-size: 2rem;
+            border: 1px solid black;
+            margin: 2px;
+            text-align: center;
+            padding: 0px 5px;
+
+            &:hover {
+              background-color: gold;
+            }
+          }
+        }
+      }
+    }
+  }
+  .character-role {
+    padding: 10px;
+    h2 {
+      text-align: center;
+      padding-bottom: 5px;
+    }
+    // .role-buttons {
+    //   display: grid;
+    //   grid-template-columns: 1fr 1fr 1fr;
+    //   button {
+    //     width: 70px;
+    //   }
+    // }
+  }
+}
